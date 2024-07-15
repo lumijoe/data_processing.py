@@ -13,6 +13,7 @@
             background-color: aquamarine;
             height: 120px;  
             position: fixed; 
+            top: 0;
             width: 100%;
 
         }
@@ -64,7 +65,7 @@
         function updateHeaderHeight() {
             var headerHeight = $(".l-header").outerHeight();
             $(".l-header p").html(headerHeight + "px");
-            $(".l-section").css("padding-top", headerHeight + "px");
+            $(".l-fv").css("padding-top", headerHeight + "px");
         }
 
         function scrollToSection(event) {
@@ -98,7 +99,7 @@
         </div>
     </header>
     <main>
-        <section class="l-section l-fv">
+        <section class="l-fv">
             <h1>firstview section</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus reprehenderit ex quaerat veniam? Ipsam doloremque sunt aperiam laudantium ab doloribus incidunt fugiat magni quos dicta, eveniet voluptatibus reprehenderit sed fugit.
             Obcaecati, nostrum corrupti error possimus aliquam fuga, aliquid, architecto et accusamus ab impedit nihil? Illo quos minus enim! Aliquam consectetur modi quaerat deleniti placeat ratione eius dicta. Ullam, soluta inventore!
