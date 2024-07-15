@@ -52,7 +52,16 @@
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      
+        // function updateHeaderHeight() {
+        //     var headerHeight = $(".l-header").css("height");
+        //     $(".l-header p").html(headerHeight);
+        //     $(".l-section").css("padding-top", headerHeight + "px");
+        // }
+
+        // $(document).ready(function() {
+        //     updateHeaderHeight();
+        //     $(window).resize(updateHeaderHeight);
+        // });
         function updateHeaderHeight() {
             var headerHeight = $(".l-header").outerHeight();
             $(".l-header p").html(headerHeight + "px");
@@ -73,9 +82,9 @@
             updateHeaderHeight();
             $(window).resize(updateHeaderHeight);
             $('a[href^="#"]').on('click', scrollToSection);
-            
+            // $('.l-header a[href^="#"]').on('click', scrollToSection);
         });
-       
+        
     </script>
 </head>
 <body>
@@ -84,37 +93,36 @@
             <h1 class="p-logo"><a href="/index.html" style="text-decoration-line: none;">logo</a></h1>
             <p></p>
             <ul style="display: flex; flex-direction: row; list-style-type: none; gap: 20px;">
-                <li><a href="#list">list</a></li>
-                <li><a href="#help">help</a></li>
-                <li><a href="#service">service</a></li>
-                <li><a href="#faq">faq</a></li>
-                <li><a href="./contact.html">contact</a></li>
+                <li><a href="./index.html#list">list</a></li>
+                <li><a href="./index.html#help">help</a></li>
+                <li><a href="./index.html#service">service</a></li>
+                <li><a href="./index.html#faq">faq</a></li>
             </ul>
         </div>
     </header>
     <main>
-        <section class="l-fv">
-            <h1>INDEX firstview section</h1>
+        <section class="l-fv"> 
+            <h1>CONTACT firstview section</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus reprehenderit ex quaerat veniam? Ipsam doloremque sunt aperiam laudantium ab <a href="#set">doloribus incidunt</a> doloribus incidunt fugiat magni quos dicta, eveniet voluptatibus reprehenderit sed fugit.
             Obcaecati, nostrum corrupti error possimus aliquam fuga, aliquid, architecto et accusamus ab impedit nihil? Illo quos minus enim! Aliquam consectetur modi quaerat deleniti placeat ratione eius dicta. Ullam, soluta inventore!
            </p>
         </section>
-        <section class="l-section l-list" id="list">
+        <section class="l-section l-list" >
             <h1>list section</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laborum labore, id magni perspiciatis dignissimos cum dicta pariatur, odio temporibus ad atque unde ipsum aspernatur repudiandae voluptatum, tempore quasi blanditiis.pora, culpa sit, voluptatibus non architecto.</p>
         </section>
-        <section class="l-section l-help" id="help">
+        <section class="l-section l-help">
             <h1>help section</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laborum labore, id magni perspiciatis dignissimos cum dicta pariatur, odio temporibus ad atque unde ipsum aspernatur repudiandae voluptatum, tempore quasi blanditiis.</p>
         </section>
-        <section class="l-section l-service" id="service">
+        <section class="l-section l-service">
             <h1>service section</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laborum labore, id magni perspiciatis dignissimos cum dicta pariatur, odio temporibus ad atque unde ipsum aspernatur repudiandae voluptatum, tempore quasi blanditiis.
             Quia repellendus est optio numquam perferendis magnam esse laboriosam eos voluptatem neque vel eligendi, tempora delectus ratione amet, illo distinctio, eum at minus! Aut, repellat. Deleniti reprehenderit rerum aperiam autem.</p>
         </section>
-        <section class="l-section l-faq" id="faq">
+        <section class="l-section l-faq" >
             <h1>faq section</h1>
-            <a href="#help">helpへ</a>
+        
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laborum labore, id magni perspiciatis dignissimos cum dicta pariatur, odio temporibus ad <span id="set" style="color: brown;"> explicabo!</span>atque unde ipsum aspernatur repudiandae voluptatum, tempore quasi blanditiis.
             Quia repellendus est optio numquam perferendis magnam esse laboriosam eos voluptatem neque vel eligendi, tempora delectus ratione amet, illo distinctio, eum at minus! Aut, repellat. Deleniti reprehenderit rerum aperiam autem.
             Corrupti, ducimus. Laborum autem fuga rem corrupti ipsam natus dignissimos reiciendis aspernatur facilis omnis, aperiam ea magni, perspiciatis nisi quam nesciunt ex, distinctio explicabo? Quam sunt error beatae autem aperiam?
