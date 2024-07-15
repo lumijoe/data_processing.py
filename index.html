@@ -82,13 +82,14 @@
             updateHeaderHeight();
             $(window).resize(updateHeaderHeight);
             $('a[href^="#"]').on('click', scrollToSection);
+            // $('.l-header a[href^="#"]').on('click', scrollToSection);
         });
     </script>
 </head>
 <body>
     <header class="l-header">
         <div class="l-header-inner" style="display: flex; flex-direction: row; justify-content: space-between;">
-            <h1 class="p-logo">logo</h1>
+            <h1 class="p-logo"><a href="/index.html" style="text-decoration-line: none;">logo</a></h1>
             <p></p>
             <ul style="display: flex; flex-direction: row; list-style-type: none; gap: 20px;">
                 <li><a href="#list">list</a></li>
@@ -101,7 +102,7 @@
     <main>
         <section class="l-fv">
             <h1>firstview section</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus reprehenderit ex quaerat veniam? Ipsam doloremque sunt aperiam laudantium ab doloribus incidunt fugiat magni quos dicta, eveniet voluptatibus reprehenderit sed fugit.
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus reprehenderit ex quaerat veniam? Ipsam doloremque sunt aperiam laudantium ab <a href="#set">doloribus incidunt</a> doloribus incidunt fugiat magni quos dicta, eveniet voluptatibus reprehenderit sed fugit.
             Obcaecati, nostrum corrupti error possimus aliquam fuga, aliquid, architecto et accusamus ab impedit nihil? Illo quos minus enim! Aliquam consectetur modi quaerat deleniti placeat ratione eius dicta. Ullam, soluta inventore!
            </p>
         </section>
@@ -119,8 +120,9 @@
             Quia repellendus est optio numquam perferendis magnam esse laboriosam eos voluptatem neque vel eligendi, tempora delectus ratione amet, illo distinctio, eum at minus! Aut, repellat. Deleniti reprehenderit rerum aperiam autem.</p>
         </section>
         <section class="l-section l-faq" id="faq">
-            <h1>service section</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laborum labore, id magni perspiciatis dignissimos cum dicta pariatur, odio temporibus ad atque unde ipsum aspernatur repudiandae voluptatum, tempore quasi blanditiis.
+            <h1>faq section</h1>
+            <a href="#help">helpへ</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laborum labore, id magni perspiciatis dignissimos cum dicta pariatur, odio temporibus ad <span id="set" style="color: brown;"> explicabo!</span>atque unde ipsum aspernatur repudiandae voluptatum, tempore quasi blanditiis.
             Quia repellendus est optio numquam perferendis magnam esse laboriosam eos voluptatem neque vel eligendi, tempora delectus ratione amet, illo distinctio, eum at minus! Aut, repellat. Deleniti reprehenderit rerum aperiam autem.
             Corrupti, ducimus. Laborum autem fuga rem corrupti ipsam natus dignissimos reiciendis aspernatur facilis omnis, aperiam ea magni, perspiciatis nisi quam nesciunt ex, distinctio explicabo? Quam sunt error beatae autem aperiam?
             Obcaecati facilis ratione sit quisquam, excepturi iste exercitationem nesciunt amet assumenda. Quo velit illum cupiditate reiciendis aspernatur repellat dolore itaque blanditiis soluta. Eos alias mollitia fuga tempora quis aspernatur blanditiis?
@@ -139,7 +141,7 @@
         <h1>footer</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime assumenda adipisci sit architecto? Error modi, magnam laudantium quis dolor minima vitae sunt optio a labore dicta vero eligendi quod nesciunt?
         Minima nostrum at quis et reprehenderit odio, a asperiores praesentium totam accusantium, obcaecati illum enim, sint deleniti temporibus facere ut dolore aut numquam est! Architecto, at voluptate. Placeat, similique nam!
-        Illum autem provident incidunt officiis repudiandae dolorem aut voluptas vel eius, dicta voluptatibus, quae soluta! Debitis eum, dolorum facere blanditiis numquam totam, officia possimus et deleniti perspiciatis expedita nobis explicabo!
+        Illum autem provident incidunt officiis repudiandae dolorem aut voluptas vel eius, dicta voluptatibus, quae soluta! Debitis eum, dolorum facere blanditiis numquam totam, officia possimus et deleniti perspiciatis expedita nobis 
         Sed repudiandae illo, molestiae reprehenderit minima minus perspiciatis est soluta iure debitis quo. Vitae odit saepe voluptate non laudantium quam impedit at iste fugit quod ab aliquid, error nemo sequi.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime assumenda adipisci sit architecto? Error modi, magnam laudantium quis dolor minima vitae sunt optio a labore dicta vero eligendi quod nesciunt?
         Minima nostrum at quis et reprehenderit odio, a asperiores praesentium totam accusantium, obcaecati illum enim, sint deleniti temporibus facere ut dolore aut numquam est! Architecto, at voluptate. Placeat, similique nam!
