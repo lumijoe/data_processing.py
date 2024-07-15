@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            margin: 0;
+        
+        }
+        .l-header {
+            background-color: aquamarine;
+            height: 120px;  
+            position: fixed; 
+            width: 100%;
+
+        }
+        .l-header-inner {
+
+            flex-direction: row;
+        }
+        .l-section {
+            padding-top: 1rem!important;
+        }
+        .l-fv {
+            padding-top: 0px;
+        }
+        .l-list {
+            background-color: blanchedalmond;
+        }
+        .l-help {
+            background-color: rgb(144, 213, 130);
+        }
+        .l-service {
+            background-color: rgb(233, 198, 229);
+        }
+        .l-faq {
+            background-color: rgb(230, 233, 198);
+        }
+        @media (max-width:768px) {
+            .l-header {
+                background-color: aqua;
+                height: 80px;
+            }
+            .p-logo::after {
+                content: "~sp~";
+            }
+            
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // function updateHeaderHeight() {
+        //     var headerHeight = $(".l-header").css("height");
+        //     $(".l-header p").html(headerHeight);
+        //     $(".l-section").css("padding-top", headerHeight + "px");
+        // }
+
+        // $(document).ready(function() {
+        //     updateHeaderHeight();
+        //     $(window).resize(updateHeaderHeight);
+        // });
+        function updateHeaderHeight() {
+            var headerHeight = $(".l-header").outerHeight();
+            $(".l-header p").html(headerHeight + "px");
+            $(".l-section").css("padding-top", headerHeight + "px");
+        }
+
+        function scrollToSection(event) {
+            event.preventDefault();
+            var targetId = $(this).attr("href");
+            var targetOffset = $(targetId).offset().top;
+            var headerHeight = $(".l-header").outerHeight();
+            $('html, body').animate({
+                scrollTop: targetOffset - headerHeight
+            }, 500);
+        }
+
+        $(document).ready(function() {
+            updateHeaderHeight();
+            $(window).resize(updateHeaderHeight);
+            $('a[href^="#"]').on('click', scrollToSection);
+        });
+    </script>
+</head>
+<body>
+    <header class="l-header">
+        <div class="l-header-inner" style="display: flex; flex-direction: row; justify-content: space-between;">
+            <h1 class="p-logo">logo</h1>
+            <p></p>
+            <ul style="display: flex; flex-direction: row; list-style-type: none; gap: 20px;">
+                <li><a href="#list">list</a></li>
+                <li><a href="#help">help</a></li>
+                <li><a href="#service">service</a></li>
+                <li><a href="#faq">faq</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="l-section l-fv">
+            <h1>firstview section</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus reprehenderit ex quaerat veniam? Ipsam doloremque sunt aperiam laudantium ab doloribus incidunt fugiat magni quos dicta, eveniet voluptatibus reprehenderit sed fugit.
+            Obcaecati, nostrum corrupti error possimus aliquam fuga, aliquid, architecto et accusamus ab impedit nihil? Illo quos minus enim! Aliquam consectetur modi quaerat deleniti placeat ratione eius dicta. Ullam, soluta inventore!
+           </p>
+        </section>
+        <section class="l-section l-list" id="list">
+            <h1>list section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laborum labore, id magni perspiciatis dignissimos cum dicta pariatur, odio temporibus ad atque unde ipsum aspernatur repudiandae voluptatum, tempore quasi blanditiis.pora, culpa sit, voluptatibus non architecto.</p>
+        </section>
+        <section class="l-section l-help" id="help">
+            <h1>help section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laborum labore, id magni perspiciatis dignissimos cum dicta pariatur, odio temporibus ad atque unde ipsum aspernatur repudiandae voluptatum, tempore quasi blanditiis.</p>
+        </section>
+        <section class="l-section l-service" id="service">
+            <h1>service section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laborum labore, id magni perspiciatis dignissimos cum dicta pariatur, odio temporibus ad atque unde ipsum aspernatur repudiandae voluptatum, tempore quasi blanditiis.
+            Quia repellendus est optio numquam perferendis magnam esse laboriosam eos voluptatem neque vel eligendi, tempora delectus ratione amet, illo distinctio, eum at minus! Aut, repellat. Deleniti reprehenderit rerum aperiam autem.</p>
+        </section>
+        <section class="l-section l-faq" id="faq">
+            <h1>service section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laborum labore, id magni perspiciatis dignissimos cum dicta pariatur, odio temporibus ad atque unde ipsum aspernatur repudiandae voluptatum, tempore quasi blanditiis.
+            Quia repellendus est optio numquam perferendis magnam esse laboriosam eos voluptatem neque vel eligendi, tempora delectus ratione amet, illo distinctio, eum at minus! Aut, repellat. Deleniti reprehenderit rerum aperiam autem.
+            Corrupti, ducimus. Laborum autem fuga rem corrupti ipsam natus dignissimos reiciendis aspernatur facilis omnis, aperiam ea magni, perspiciatis nisi quam nesciunt ex, distinctio explicabo? Quam sunt error beatae autem aperiam?
+            Obcaecati facilis ratione sit quisquam, excepturi iste exercitationem nesciunt amet assumenda. Quo velit illum cupiditate reiciendis aspernatur repellat dolore itaque blanditiis soluta. Eos alias mollitia fuga tempora quis aspernatur blanditiis?
+            Vero molestias enim nihil repellat fugit in amet repudiandae, ut cum temporibus dolorum inventore officiis quaerat nam voluptates reiciendis! Magni facere vitae quasi quam, excepturi et. Iure deserunt aut modi.
+            Voluptates voluptate mollitia molestias veritatis vero molestiae facilis officia et nisi dolores blanditiis sapiente eius porro voluptatibus vel ut officiis, maiores velit quia commodi, reprehenderit animi. Quo nihil culpa laboriosam.
+            Dicta exercitationem delectus vitae officiis amet tempore aliquid quibusdam asperiores aspernatur commodi vero quia ducimus veritatis debitis officia molestias molestiae laborum ex, in unde sequi quod vel id. Laudantium, inventore!
+            Commodi, molestias labore culpa sequi voluptatem consequatur hic doloribus quam laboriosam quisquam tenetur aliquam natus a nam quod perspiciatis rem architecto alias debitis, aut itaque. Officiis incidunt at sapiente accusantium.
+            Sunt ipsa est temporibus optio modi tenetur possimus recusandae ipsum praesentium. Iusto eveniet ad dolore. Nihil fugiat consequuntur nam atque autem ea adipisci quo tempora, culpa sit, voluptatibus non architecto.
+            Tempora mollitia a facere ratione, aut officiis quibusdam temporibus quia vel sequi obcaecati voluptates eligendi quaerat odio et eius blanditiis id voluptas nisi? Eos sit numquam necessitatibus voluptas deleniti quis!
+            Debitis iure, reiciendis dolorem minima architecto, aliquid repudiandae earum magnam a sunt repellendus repellat nam natus omnis deserunt! Blanditiis dignissimos cupiditate eius iste delectus, vel unde ducimus excepturi quae. Atque.
+            Consequatur laudantium expedita sapiente. Doloribus, culpa quaerat? Praesentium itaque repellat neque, magni voluptate nulla? Animi officia sit vel sunt labore perferendis? Nemo assumenda natus minima. Cumque repudiandae nihil eius aliquid?
+            Animi sed quia ex sunt labore repellat amet aut neque dignissimos laudantium veritatis aliquid nostrum unde, et nam aspernatur? Voluptatem, dolore excepturi deleniti nemo sunt odio quae eligendi earum deserunt.</p>
+        </section>
+    </main>
+    <footer>
+        <h1>footer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime assumenda adipisci sit architecto? Error modi, magnam laudantium quis dolor minima vitae sunt optio a labore dicta vero eligendi quod nesciunt?
+        Minima nostrum at quis et reprehenderit odio, a asperiores praesentium totam accusantium, obcaecati illum enim, sint deleniti temporibus facere ut dolore aut numquam est! Architecto, at voluptate. Placeat, similique nam!
+        Illum autem provident incidunt officiis repudiandae dolorem aut voluptas vel eius, dicta voluptatibus, quae soluta! Debitis eum, dolorum facere blanditiis numquam totam, officia possimus et deleniti perspiciatis expedita nobis explicabo!
+        Sed repudiandae illo, molestiae reprehenderit minima minus perspiciatis est soluta iure debitis quo. Vitae odit saepe voluptate non laudantium quam impedit at iste fugit quod ab aliquid, error nemo sequi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime assumenda adipisci sit architecto? Error modi, magnam laudantium quis dolor minima vitae sunt optio a labore dicta vero eligendi quod nesciunt?
+        Minima nostrum at quis et reprehenderit odio, a asperiores praesentium totam accusantium, obcaecati illum enim, sint deleniti temporibus facere ut dolore aut numquam est! Architecto, at voluptate. Placeat, similique nam!
+        Illum autem provident incidunt officiis repudiandae dolorem aut voluptas vel eius, dicta voluptatibus, quae soluta! Debitis eum, dolorum facere blanditiis numquam totam, officia possimus et deleniti perspiciatis expedita nobis explicabo!
+        Sed repudiandae illo, molestiae reprehenderit minima minus perspiciatis est soluta iure debitis quo. Vitae odit saepe voluptate non laudantium quam impedit at iste fugit quod ab aliquid, error nemo sequi.</p>
+        Sed repudiandae illo, molestiae reprehenderit minima minus perspiciatis est soluta iure debitis quo. Vitae odit saepe voluptate non laudantium quam impedit at iste fugit quod ab aliquid, error nemo sequi.</p>
+        Sed repudiandae illo, molestiae reprehenderit minima minus perspiciatis est soluta iure debitis quo. Vitae odit saepe voluptate non laudantium quam impedit at iste fugit quod ab aliquid, error nemo sequi.</p>
+    </footer>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
